@@ -3,10 +3,10 @@ Project aiming to visualize a language model. The aim of this project is purely 
 
 This project is freely inspired by https://johnhw.github.io/umap_primes/index.md.html
 
-# Problem
+## Problem
 
-# Data
+## Data
 
-# Methodology
+## Methodology
 
-# Results
+## Results
