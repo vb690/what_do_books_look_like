@@ -2,7 +2,7 @@ from modules.utils.general_utils import dirs_creation, dump_pickle
 from modules.utils.data_utils import pdf_plumbering, preprocessing
 
 
-for project_name in ['books', 'got']:
+for project_name in ['books']:
 
     dirs_creation(
         [

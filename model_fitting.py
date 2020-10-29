@@ -59,7 +59,7 @@ ES = EarlyStopping(
 
 tuner_obj = Hyperband(
     hypermodel=model,
-    max_epochs=10,
+    max_epochs=30,
     hyperband_iterations=1,
     objective='val_loss',
     directory='o',
@@ -68,7 +68,7 @@ tuner_obj = Hyperband(
 
 tuner_obj.search(
     tr_generator,
-    epochs=10,
+    epochs=30,
     callbacks=[ES],
     verbose=2,
     validation_data=ts_generator
@@ -97,7 +97,7 @@ ts_generator = DataGenerator(
 model = tuner_obj.get_best_models(1)[0]
 model.fit(
     tr_generator,
-    epochs=10,
+    epochs=30,
     verbose=2,
     callbacks=[ES],
     validation_data=ts_generator

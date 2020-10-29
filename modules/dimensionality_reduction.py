@@ -29,12 +29,17 @@ def UMAP_fitting(array, n_components, n_neighbors, min_dist, fraction=0.33,
 
 
 def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
-                figsize, n_components=2, fraction=0.33, embed_targets=False,
-                root='results\\figures\\tune\\', **kwargs):
+                figsize, project_name, n_components=2, fraction=0.33,
+                embed_targets=False, **kwargs):
     """
     """
+    root = f'results\\figures\\{project_name}\\tune'
     dirs_creation(
-        [f'{root}{para[0]}_{para[1]}' for para in parameters_combination],
+        [root],
+        wipe_dir=True
+    )
+    dirs_creation(
+        [f'{root}\\{para[0]}_{para[1]}' for para in parameters_combination],
         wipe_dir=True
     )
     plt.style.use('dark_background')
@@ -84,8 +89,8 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
                     weight='bold'
                 )
                 fig_target.savefig(
-                    f'{root}{parameters[0]}_{parameters[1]}\\{target}_emb.png',
-                    dpi=1000
+                    f'{root}\\{parameters[0]}_{parameters[1]}\\{target}_emb.png',
+                    dpi=400
                 )
 
         fig_main, ax_main = plt.subplots(figsize=figsize)
@@ -116,8 +121,8 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
                 weight='bold'
             )
             fig_sub.savefig(
-                f'{root}{parameters[0]}_{parameters[1]}\\{target}.png',
-                dpi=1000
+                f'{root}\\{parameters[0]}_{parameters[1]}\\{target}.png',
+                dpi=400
             )
 
             ax_main.scatter(
@@ -144,7 +149,7 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
             weight='bold'
         )
         fig_main.savefig(
-            f'{root}{parameters[0]}_{parameters[1]}\\galaxy.png',
-            dpi=1000
+            f'{root}\\{parameters[0]}_{parameters[1]}\\galaxy.png',
+            dpi=400
         )
         plt.close('all')

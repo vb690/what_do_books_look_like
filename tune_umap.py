@@ -5,9 +5,14 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 
 from modules.utils.data_utils import embedding_extraction
+from modules.utils.general_utils import dirs_creation
 from modules.dimensionality_reduction import UMAP_tuning
 
 PROJECT_NAME = 'books'
+dirs_creation(
+    [f'results\\figures\\{PROJECT_NAME}'],
+    wipe_dir=True
+)
 TARGET_DECODER = pd.read_pickle(
     f'results\\objects\\{PROJECT_NAME}\\target_decoder.pkl'
 )
@@ -20,7 +25,9 @@ targets_themes = {
     "Alice's Adventures in Wonderland": 'viridis',
     'Trainspotting': 'magma',
     "The Hitchiker's Guide to the Galaxy": 'summer',
-    'The Little Prince': 'spring'
+    'The Little Prince': 'spring',
+    'The Handmaids Tale': 'autumn',
+    'Girl, Woman, Other': 'cool',
 }
 parameters_combination = list(product(N_NEIGHBORS, MIN_DIST))
 
@@ -43,5 +50,6 @@ UMAP_tuning(
     figsize=(10, 10),
     n_components=2,
     fraction=0.05,
+    project_name='books',
     embed_targets=True
 )

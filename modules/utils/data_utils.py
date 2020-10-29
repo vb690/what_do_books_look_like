@@ -15,13 +15,13 @@ from tensorflow.keras.utils import Sequence
 
 
 class DataGenerator(Sequence):
-    '''
+    """
     Class implementing a data generator
-    '''
+    """
     def __init__(self, list_batches, project_name, shuffle=True,
                  multi_target=False):
-        '''
-        '''
+        """
+        """
         self.list_batches = list_batches
         self.shuffle = shuffle
         self.multi_target = multi_target
@@ -29,15 +29,15 @@ class DataGenerator(Sequence):
         self.on_epoch_end()
 
     def __len__(self):
-        '''
+        """
         Denotes the number of batches per epoch'
-        '''
+        """
         return int(len(self.list_batches))
 
     def __getitem__(self, index):
-        '''
+        """
         Generate one batch of data
-        '''
+        """
         # Pick a batch
         batch = self.list_batches[index]
         # Generate X and y
@@ -45,14 +45,15 @@ class DataGenerator(Sequence):
         return X, y
 
     def on_epoch_end(self):
-        '''
+        """
         Updates indexes after each epoch
-        '''
+        """
         if self.shuffle is True:
             np.random.shuffle(self.list_batches)
 
     def __data_generation(self, batch):
-        '''Generates data containing batch_size samples'''
+        """Generates data containing batch_size samples
+        """
         X_sentence = np.load(
             f'{self.root_dir}\\inputs\\{batch}.npy',
             allow_pickle=True
@@ -133,8 +134,8 @@ def preprocessing(list_sentences, targets, project_id, max_len=60,
     """
     """
     # create empty dictionaries
-    dict_sentences = {length: [] for length in range(3, max_len)}
-    dict_targets = {length: [] for length in range(3, max_len)}
+    dict_sentences = {length: [] for length in range(3, max_len + 1)}
+    dict_targets = {length: [] for length in range(3, max_len + 1)}
 
     # tokenize the sentences
     bag_of_sentences = [
@@ -155,10 +156,22 @@ def preprocessing(list_sentences, targets, project_id, max_len=60,
         if len(sentence) < 3:
             continue
         bag_of_words = [sentence_encoder[word] for word in sentence]
-        dict_sentences[len(bag_of_words)].append(bag_of_words)
+        if len(bag_of_words) > max_len:
+            for cut in range(0, len(bag_of_words), max_len):
 
-        bag_of_targets = [target_encoder[target]] * len(bag_of_words)
-        dict_targets[len(bag_of_words)].append(bag_of_targets)
+                trim_bag_of_words = bag_of_words[cut:cut + max_len]
+                dict_sentences[
+                    len(trim_bag_of_words)].append(trim_bag_of_words)
+
+                trim_bag_of_targets = [
+                    target_encoder[target]] * len(trim_bag_of_words)
+                dict_targets[
+                    len(trim_bag_of_targets)].append(trim_bag_of_targets)
+        else:
+            dict_sentences[len(bag_of_words)].append(bag_of_words)
+
+            bag_of_targets = [target_encoder[target]] * len(bag_of_words)
+            dict_targets[len(bag_of_words)].append(bag_of_targets)
 
     batch_count = 0
     for length in range(3, max_len):
