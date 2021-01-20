@@ -1,12 +1,16 @@
 # What do Books Look Like?
 Project aiming to visualize a language model. The aim of this project is purely aesthetic and not scientific, the presented results should be interpreted with caution (or not intepreted at all).
 
-This project is freely inspired by https://johnhw.github.io/umap_primes/index.md.html
+This project is freely inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 
-## Problem
+## Motivation
 
-## Data
+## Features
 
-## Methodology
+## How to Use
 
-## Results
+## Credits
+
+## License 
+[The MIT License](https://github.com/vb690/what_do_books_look_like/blob/master/LICENSE)
+
