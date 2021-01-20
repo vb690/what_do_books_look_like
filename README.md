@@ -5,20 +5,10 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 
 ## The League of Extraordinary Gentlemen
 
-
-<p float="center">
-  <img src="page/images/dracula.png" width="400" />
-  <img src="page/images/king_solomon_mines.png" width="400" /> 
-  <img src="page/images/the_invisible_man.png" width="400" />
-   <img src="page/images/the_picture_of_dorian_gray.png" width="400" />
-  <img src="page/images/the_strange_case.png" width="400" /> 
-  <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="400" />
-</p>
-
 <video 
   src="page/videos/league.mp4" 
-  width="500" 
-  height="500" 
+  width="700" 
+  height="700" 
   controls preload>
  </video>
 
