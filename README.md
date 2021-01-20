@@ -1,7 +1,7 @@
 # What do Books Look Like?
-Project aiming to visualize the books representations learned by a word-level language model. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
+This project aims to visualize the representation learned by a word-level language model trained on a set of classics of the literature. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
 
-This project is freely inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
+This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 
 ## The League of Extraordinary Gentlemen
 
