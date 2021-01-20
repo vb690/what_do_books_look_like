@@ -3,9 +3,10 @@ This project aims to visualize the representation learned by a word-level langua
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 <video 
+  class="center"
   src="page/videos/league.mp4" 
-  width="700" 
-  height="700" 
+  width="500" 
+  height="500" 
   controls preload>
  </video>
  
