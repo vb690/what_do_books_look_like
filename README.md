@@ -15,6 +15,13 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>
 
+<video 
+  src="page/videos/league.mp4" 
+  width="320" 
+  height="200" 
+  controls preload>
+ </video>
+
 
 
 ## Motivation
