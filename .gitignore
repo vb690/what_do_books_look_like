@@ -130,5 +130,16 @@ dmypy.json
 
 # folders
 data/*
-o/*
+
+!data/jsons
+data/jsons/*
+!data/jsons/league.json
+
+!data/raw
+data/raw/*
+!data/raw/league
+
 results/*
+!results/.gitkeep
+
+o/*
