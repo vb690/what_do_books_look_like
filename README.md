@@ -1,4 +1,3 @@
-# What do Books Look Like?
 This project aims to visualize the representation learned by a word-level language model trained on a collection of classics of the literature. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
