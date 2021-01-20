@@ -6,7 +6,7 @@ This project is freely inspired by [What do numbers look like](https://johnhw.gi
 ## The League of Extraordinary Gentlemen
 
 
-<p float="left">
+<p float="center">
   <img src="page/images/dracula.png" width="450" />
   <img src="page/images/king_solomon_mines.png" width="450" /> 
   <img src="page/images/the_invisible_man.png" width="450" />
