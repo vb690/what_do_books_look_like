@@ -7,12 +7,12 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 
 
 <p float="center">
-  <img src="page/images/dracula.png" width="350" />
-  <img src="page/images/king_solomon_mines.png" width="350" /> 
-  <img src="page/images/the_invisible_man.png" width="350" />
-   <img src="page/images/the_picture_of_dorian_gray.png" width="350" />
-  <img src="page/images/the_strange_case.png" width="350" /> 
-  <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="350" />
+  <img src="page/images/dracula.png" width="400" />
+  <img src="page/images/king_solomon_mines.png" width="400" /> 
+  <img src="page/images/the_invisible_man.png" width="400" />
+   <img src="page/images/the_picture_of_dorian_gray.png" width="400" />
+  <img src="page/images/the_strange_case.png" width="400" /> 
+  <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="400" />
 </p>
 
 <video 
