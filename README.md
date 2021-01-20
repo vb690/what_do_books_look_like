@@ -17,8 +17,8 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 
 <video 
   src="page/videos/league.mp4" 
-  width="320" 
-  height="200" 
+  width="500" 
+  height="500" 
   controls preload>
  </video>
 
