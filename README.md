@@ -2,6 +2,9 @@
 This project aims to visualize the representation learned by a word-level language model trained on a collection of classics of the literature. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
+
+ ### The League of Extraordinary Gentlemen
+ 
 <video 
   class="center"
   src="page/videos/league.mp4" 
@@ -9,8 +12,6 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
   height="500" 
   controls preload>
  </video>  
-   
- ## The League of Extraordinary Gentlemen
 
 <p float="center">
   <img src="page/images/dracula.png" width="300" />
