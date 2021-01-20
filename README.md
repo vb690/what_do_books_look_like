@@ -10,7 +10,7 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
   controls preload>
  </video>
  
- ### The League of Extraordinary Gentlemen
+ ## The League of Extraordinary Gentlemen
 
 <p float="center">
   <img src="page/images/dracula.png" width="300" />
