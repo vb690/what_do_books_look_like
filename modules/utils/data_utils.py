@@ -1,5 +1,7 @@
 import os
 
+import re
+
 from tqdm import tqdm
 
 import numpy as np
@@ -82,6 +84,7 @@ class DataGenerator(Sequence):
 def pdf_plumbering(pdfs_path, project_id):
     """
     """
+    regex = re.compile(r'[\n\r\t]')
     list_pdfs = []
     for name in os.listdir(f'{pdfs_path}\\{project_id}'):
 
@@ -92,12 +95,14 @@ def pdf_plumbering(pdfs_path, project_id):
                 txt = page.extract_text()
                 if txt is None:
                     continue
-                total_text += txt.replace('\n', '')
+                replaced = regex.sub(' ', txt)
+                total_text += replaced
 
         sentences = np.array(total_text.split('.'))
         df = pd.DataFrame(columns=['sentences'])
         df['sentences'] = sentences
         df['document'] = name
+        df = df.dropna()
         list_pdfs.append(df)
 
     df = pd.concat(list_pdfs)
@@ -129,7 +134,7 @@ def encoding(bag_of_categories, nested=False, start=0):
     return encoder, decoder
 
 
-def preprocessing(list_sentences, targets, project_id, max_len=60,
+def preprocessing(list_sentences, targets, project_id, max_len=40,
                   max_batch=64):
     """
     """
@@ -160,6 +165,8 @@ def preprocessing(list_sentences, targets, project_id, max_len=60,
             for cut in range(0, len(bag_of_words), max_len):
 
                 trim_bag_of_words = bag_of_words[cut:cut + max_len]
+                if len(trim_bag_of_words) < 3:
+                    continue
                 dict_sentences[
                     len(trim_bag_of_words)].append(trim_bag_of_words)
 
@@ -186,7 +193,6 @@ def preprocessing(list_sentences, targets, project_id, max_len=60,
                 sentence_tar_batch.shape[0],
                 sentence_tar_batch.shape[1],
                 1
-
              )
         )
         sentence_batch = sentence_batch[:, :-1]
@@ -198,7 +204,6 @@ def preprocessing(list_sentences, targets, project_id, max_len=60,
                 class_tar_batch.shape[0],
                 class_tar_batch.shape[1],
                 1
-
              )
         )
         num_batches = (
@@ -277,11 +282,16 @@ def embedding_extraction(model, project_name, target_decoder, colors_bins=20,
         X_sequences = X_sequences.reshape((rows, cols, 1))
 
         encodes = encoder.predict([X_text, X_sequences])
+        encodes = encodes[:, 1:, :]
         rows, t_steps, cols = encodes.shape
         encodes = encodes.reshape(rows * t_steps, cols)
+
+        X_sequences = X_sequences[:, 1:]
         sequences = X_sequences.reshape(rows * t_steps)
         list_encodes.append(encodes)
         list_sequences.append(sequences)
+
+        y_class = y_class[:, 1:, :]
         list_targets.append(y_class.reshape(rows * t_steps))
 
     encodes = np.vstack(list_encodes)

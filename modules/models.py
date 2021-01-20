@@ -41,7 +41,7 @@ class LanguageModel(HyperModel):
             name='input_sequence'
         )
 
-        # encoding
+        # EMBEDDINGS
         embedding_text = Embedding(
             input_dim=self.max_vocab,
             output_dim=hp.Int(
@@ -58,6 +58,7 @@ class LanguageModel(HyperModel):
             name='embedding_text_dropout'
         )(embedding_text)
 
+        # TEXT FEATURES CREATION
         td_sequence = Dense(
             units=hp.Int(
                 min_value=25,
@@ -88,21 +89,19 @@ class LanguageModel(HyperModel):
             name='td_text_features_dropout'
         )(td_text_features)
 
+        # LSTM BLOCK
         out_text = LSTM(
             units=hp.Int(
                 min_value=25,
-                max_value=250,
+                max_value=150,
                 step=25,
                 name='lstm_text_features'
                 ),
             return_sequences=True,
             name='features_extractor'
         )(td_text_features)
-        out_text = SpatialDropout1D(
-            rate=dropout_rate,
-            name='out_text_dropout'
-        )(out_text)
 
+        # TARGETS ESTIMATORS
         if self.multi_target:
 
             # ################### FIRST TARGET ###################

@@ -9,28 +9,21 @@ import matplotlib.pyplot as plt
 from modules.utils.general_utils import dirs_creation
 
 
-def UMAP_fitting(array, n_components, n_neighbors, min_dist, fraction=0.33,
-                 **kwargs):
+def UMAP_fitting(array, n_components, n_neighbors, min_dist, **kwargs):
     """
     """
-    indices = [i for i in range(array.shape[0])]
-    indices = np.random.choice(
-        indices,
-        int(len(indices) * fraction)
-    )
-    reducer = UMAP(
+    reduction = UMAP(
         n_components=n_components,
         n_neighbors=n_neighbors,
         min_dist=min_dist,
         **kwargs
-    ).fit(array[indices])
-    reduction = reducer.transform(array)
+    ).fit_transform(array)
     return reduction
 
 
 def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
-                figsize, project_name, n_components=2, fraction=0.33,
-                embed_targets=False, **kwargs):
+                figsize, project_name, n_components=2, embed_targets=False,
+                **kwargs):
     """
     """
     root = f'results\\figures\\{project_name}\\tune'
@@ -50,19 +43,18 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
             n_components=2,
             n_neighbors=parameters[0],
             min_dist=parameters[1],
-            fraction=fraction,
             **kwargs
         )
 
         if embed_targets:
             for target, theme in targets_themes.items():
+
                 index = np.argwhere(targets == target).flatten()
                 target_reduction = UMAP_fitting(
                     array=array[index],
                     n_components=2,
                     n_neighbors=parameters[0],
                     min_dist=parameters[1],
-                    fraction=fraction,
                     **kwargs
                 )
                 fig_target, ax_target = plt.subplots(figsize=(10, 10))
@@ -88,8 +80,9 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
                     size=20,
                     weight='bold'
                 )
+
                 fig_target.savefig(
-                    f'{root}\\{parameters[0]}_{parameters[1]}\\{target}_emb.png',
+                    f'{root}\\{parameters[0]}_{parameters[1]}\\{target}_e.png',
                     dpi=400
                 )
 
