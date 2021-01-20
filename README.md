@@ -1,5 +1,5 @@
 # What do Books Look Like?
-Project aiming to visualize a language model. The aim of this project is purely aesthetic and not scientific, the presented results should be interpreted with caution (or not intepreted at all).
+Project aiming to visualize the books representations learned by a word-level language model. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
 
 This project is freely inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 
