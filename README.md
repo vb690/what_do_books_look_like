@@ -8,9 +8,11 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 
 ## Features
 
-## How to Use
+* Automated data preparation: from PDF to numpy arrays.
+* Integrated hyper-parameters tuning.
+* Possibility to grid-serach UMAP hyper-parameters.
 
-### Automated Pipeline
+## How to Use
 
 1. Create a folder in `data/raw` named `your_project_name`.
 2. Populate the the `your_project_name` with the books you want to embed in PDF format.
@@ -25,8 +27,11 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
   "The Invisible Man": "summer"
 }
 ```
-4. From the terminal, launch `run_pipeline.py` and specify `your_project_name` when propted to do so.
-5. When the script is done (this can take quite some time), use the notebook `generate_visuals.ipynb` for obtaining your visuals.
+4. From the terminal, launch `run_pipeline.py` and specify `your_project_name` when propted to do so.  
+  
+Alternatively, each script in `run_pipeline.py` can be launched separately (in case a specific step needs to be executed in isolation)
+  
+5. When the script is done (this can take quite some time), use the notebook `generate_visuals.ipynb` for obtaining the visuals.
 
 ## The League of Extraordinary Gentlemen
 
