@@ -129,6 +129,9 @@ dmypy.json
 .pyre/
 
 # folders
+
+############ data #############
+
 data/*
 
 !data/jsons
@@ -139,7 +142,30 @@ data/jsons/*
 data/raw/*
 !data/raw/league
 
+!data/preprocessed
+data/preprocessed/*
+!data/preprocessed/.gitkeep
+
+############ results #############
+
 results/*
-!results/.gitkeep
+
+!results/figures
+results/figures/*
+!results/figures/.gitkeep
+
+!results/models
+results/models/*
+!results/models/.gitkeep
+
+!results/objects
+results/objects/*
+!results/objects/.gitkeep
+
+!results/umap_tune
+results/umap_tune/*
+!results/umap_tune/.gitkeep
+
+############ o #############
 
 o/*
