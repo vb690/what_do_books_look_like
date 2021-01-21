@@ -1,10 +1,18 @@
  # The League of Extraordinary Gentlemen
  
- <video src="page/videos/league.mp4" width="500" height="500" controls preload> </video>  
+  <video src="page/videos/league.mp4" width="700" height="700" controls preload> </video>  
  
 This project aims to visualize the representation learned by a word-level language model trained on a collection of classics of the literature. The aim is purely aesthetic and not scientific, what presented here should be interpreted with caution (or not intepreted at all).
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
+
+## Motivation
+
+## Features
+
+## How to Use
+
+## Results
 
 <p float="center">
   <img src="page/images/dracula.png" width="300" />
@@ -14,14 +22,6 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
   <img src="page/images/the_strange_case.png" width="300" /> 
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>
-
-## Motivation
-
-## New test
-
-## Features
-
-## How to Use
 
 ## Credits
 
