@@ -4,8 +4,6 @@ This project aims to visualize the representation learned by a word-level langua
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 
-<video src="page/videos/league.mp4" width="500" height="500" controls preload> </video>  
-
 <p float="center">
   <img src="page/images/dracula.png" width="300" />
   <img src="page/images/king_solomon_mines.png" width="300" /> 
