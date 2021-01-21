@@ -10,6 +10,24 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 
 ## How to Use
 
+### Automated Pipeline
+
+1. Create a folder in `data/raw` named `your_project_name`.
+2. Populate the the `your_project_name` with the books you want to embed in PDF format.
+3. In `data/jsons` create `your_project_name.json` mapping the title of each book to a valid `matplolib` colormap.
+```python
+{
+  "Dracula": "Reds",
+  "The Picture of Dorian Gray": "plasma",
+  "Strange Case of Dr Jekyll and Mr Hyde": "viridis",
+  "King Solomon's Mines": "autumn",
+  "Twenty Thousand Leagues Under the Sea": "winter",
+  "The Invisible Man": "summer"
+}
+```
+4. From the terminal, launch `run_pipeline.py` and specify `your_project_name` when propted to do so.
+5. When the script is done (this can take quite some time), use the notebook `generate_visuals.ipynb` for obtaining your visuals.
+
 ## The League of Extraordinary Gentlemen
 
 <p float="center">
