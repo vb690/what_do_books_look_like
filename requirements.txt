@@ -1,0 +1,10 @@
+tqdm
+numpy
+pandas
+pdfplumber
+tensorflow
+kerastuner 
+skimage
+umap-learn
+matplolib
+seaborn
