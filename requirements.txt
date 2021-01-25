@@ -3,8 +3,8 @@ numpy
 pandas
 pdfplumber
 tensorflow
-kerastuner 
+keras-tuner
 skimage
 umap-learn
-matplolib
+matplotlib
 seaborn
