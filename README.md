@@ -50,7 +50,13 @@ But we can also look at the embedding for each single member
   <img src="page/images/the_picture_of_dorian_gray.png" width="300" />
   <img src="page/images/the_strange_case.png" width="300" /> 
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
-</p>
+</p>  
+  
+Or how sentences develop over time  
+  
+<p float="center">
+  <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="600" />
+</p> 
 
 ## Credits
 
