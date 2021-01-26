@@ -35,13 +35,21 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 
 ## The League of Extraordinary Gentlemen
 
+Here we can visualize the representation for the entire league  
+  
 <p float="center">
-  <img src="page/images/dracula.gif" width="300" />
-  <img src="page/images/king_solomon_mines.gif" width="300" /> 
-  <img src="page/images/the_invisible_man.gif" width="300" />
-  <img src="page/images/the_picture_of_dorian_gray.gif" width="300" />
-  <img src="page/images/the_strange_case.gif" width="300" /> 
-  <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="300" />
+  <img src="page/images/galaxy.png" width="700" />
+ </p>
+   
+But we can also look at the embedding for each single member  
+
+<p float="center">
+  <img src="page/images/dracula.png" width="300" />
+  <img src="page/images/king_solomon_mines.png" width="300" /> 
+  <img src="page/images/the_invisible_man.png" width="300" />
+  <img src="page/images/the_picture_of_dorian_gray.png" width="300" />
+  <img src="page/images/the_strange_case.png" width="300" /> 
+  <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>
 
 ## Credits
@@ -61,4 +69,3 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 
 ## License 
 The code produced for this project is under [MIT License](https://github.com/vb690/what_do_books_look_like/blob/master/LICENSE).
-
