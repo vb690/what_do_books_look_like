@@ -35,14 +35,14 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 
 ## The League of Extraordinary Gentlemen
 
-Here we can visualize the representation for the entire league  
+### Embedding of the entire collection of books
   
 <p float="center">
   <img src="page/images/galaxy.png" width="700" />
  </p>
    
-But we can also look at the embedding for each single member  
-
+### Embedding of specific books  
+  
 <p float="center">
   <img src="page/images/dracula.png" width="300" />
   <img src="page/images/king_solomon_mines.png" width="300" /> 
@@ -52,12 +52,12 @@ But we can also look at the embedding for each single member
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>  
   
-Or how sentences develop over time  
+### Evolution of sentences in a single embedding  
   
 <p float="center">
   <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="600" />
-</p> 
-
+</p>  
+  
 ## Credits
 
 * The core idea for this project comes from [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).  
