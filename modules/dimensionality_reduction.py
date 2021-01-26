@@ -26,11 +26,7 @@ def UMAP_tuning(array, targets, colors, parameters_combination, targets_themes,
                 **kwargs):
     """
     """
-    root = f'results\\figures\\{project_name}\\tune'
-    dirs_creation(
-        [root],
-        wipe_dir=True
-    )
+    root = f'results\\umap_tune\\{project_name}'
     dirs_creation(
         [f'{root}\\{para[0]}_{para[1]}' for para in parameters_combination],
         wipe_dir=True

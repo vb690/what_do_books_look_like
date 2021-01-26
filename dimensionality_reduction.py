@@ -10,17 +10,14 @@ from modules.utils.general_utils import dirs_creation
 from modules.utils.data_utils import embedding_extraction
 
 
-def run_dimensionality_reduction(PROJECT_NAME):
+def run_dimensionality_reduction(PROJECT_NAME, LOCAL_N_NEIGH=5,
+                                 LOCAL_MIN_DIST=0.2, GLOBAL_N_NEIGH=5,
+                                 GLOBAL_MIN_DIST=0.2, **kwargs):
     """
     """
     TARGET_DECODER = pd.read_pickle(
         f'results\\objects\\{PROJECT_NAME}\\target_decoder.pkl'
     )
-    LOCAL_N_NEIGH = 15
-    LOCAL_MIN_DIST = 0.3
-
-    GLOBAL_N_NEIGH = 50
-    GLOBAL_MIN_DIST = 0.5
 
     model = load_model(f'results\\models\\{PROJECT_NAME}')
 
@@ -45,8 +42,7 @@ def run_dimensionality_reduction(PROJECT_NAME):
                 n_components=dims,
                 n_neighbors=GLOBAL_N_NEIGH,
                 min_dist=GLOBAL_MIN_DIST,
-                n_epochs=1000,
-                verbose=True
+                **kwargs
         ).fit_transform(encodes)
 
         np.save(
@@ -75,4 +71,9 @@ def run_dimensionality_reduction(PROJECT_NAME):
 
 if __name__ == '__main__':
     PROJECT_NAME = input('Provide project name: ')
-    run_dimensionality_reduction(PROJECT_NAME=PROJECT_NAME)
+    run_dimensionality_reduction(
+        PROJECT_NAME=PROJECT_NAME,
+        n_epochs=1000,
+        verbose=True,
+        metric='cosine'
+    )

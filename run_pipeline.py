@@ -14,4 +14,9 @@ if __name__ == '__main__':
         PROJECT_THEMES=PROJECT_THEMES
     )
     run_model_fitting(PROJECT_NAME=PROJECT_NAME)
-    run_dimensionality_reduction(PROJECT_NAME=PROJECT_NAME)
+    run_dimensionality_reduction(
+        PROJECT_NAME=PROJECT_NAME,
+        n_epochs=1000,
+        verbose=True,
+        metric='cosine'
+    )
