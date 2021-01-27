@@ -37,13 +37,13 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 
 ### Embedding of the entire collection of books
   
-<p float="center">
+<p align="center">
   <img src="page/images/galaxy.png" width="700" />
- </p>
+</p>
    
 ### Embedding of specific books  
   
-<p float="center">
+<p align="center">
   <img src="page/images/dracula.png" width="300" />
   <img src="page/images/king_solomon_mines.png" width="300" /> 
   <img src="page/images/the_invisible_man.png" width="300" />
@@ -54,7 +54,7 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
   
 ### Evolution of sentences in a single embedding  
   
-<p float="center">
+<p align="center">
   <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="600" />
 </p>  
   
