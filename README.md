@@ -51,13 +51,13 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 
 ## The League of Extraordinary Gentlemen
 
-### Embedding of the entire collection of books
+### Word embedding for the entire collection of books
   
 <p align="center">
   <img src="page/images/galaxy.png" width="700" />
 </p>
    
-### Embedding of specific books  
+### Word embedding for specific books  
   
 <p align="center">
   <img src="page/images/dracula.png" width="300" />
@@ -68,7 +68,7 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>  
   
-### Evolution of sentences in a single embedding  
+### Sequential visuaalization of word embedding for a specific book  
   
 <p align="center">
   <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="600" />
