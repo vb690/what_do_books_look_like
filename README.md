@@ -14,6 +14,20 @@ This project was inspired by [What do numbers look like](https://johnhw.github.i
 * Integrated hyper-parameters tuning for the language model.
 * Possibility to grid-serach UMAP hyper-parameters.
 
+### Language Model and Encoder
+
+The Artificial Neural Network architecture used for this project was implemented according to the following architecture:
+
+<p align="center">
+  <img src="https://github.com/vb690/what_do_books_look_like/blob/master/page/images/language_model.svg"  width="400" />
+</p>
+
+For extracting the representation learned by the model we constructed an encoder composed by all the transformation perfromed by the model in its first portion:
+
+<p align="center">
+  <img src="https://github.com/vb690/what_do_books_look_like/blob/master/page/images/language_encoder.svg"  width="400" />
+</p>
+
 ## How to Use
 
 1. Create a folder in `data/raw` named `your_project_name`.
