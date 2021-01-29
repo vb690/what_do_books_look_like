@@ -72,7 +72,7 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
   4. **The Picture of Dorian Gray** by Oscar Fingal O'Flahertie Wills Wilde.
   5. **The Strange Case of Dr Jekyll and Mr Hyde** by Robert Louis Stevenson.
   6. **Twenty Thousand Leagues Under the Sea** by Jules Gabriel Verne.
- * The music is **Lacrimosa** from the Requiem in D minor by Wolfgang Amadeus Mozart.
+ * The music is **Lacrimosa** from the **Requiem in D minor** by Wolfgang Amadeus Mozart.
 
 
 
