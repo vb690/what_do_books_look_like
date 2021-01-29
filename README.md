@@ -66,12 +66,13 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
 * The PDF files used for producing the examples in this repository come from [Project Guttenberg](https://www.gutenberg.org/).  
 * The selection of novels was inspired by [The League of Extraordinary Gentlemen](https://en.wikipedia.org/wiki/The_League_of_Extraordinary_Gentlemen) co-created by Alan Moore and Kevin O'Neill.  
 * The selected novels have been created by:  
-  1. **Dracula** - Bram Stoker.  
-  2. **King Solomon's Mines** - Sir Henry Rider Haggard.
-  3. **The Invisible Man** - Herbert George Wells
-  4. **The Picture of Dorian Gray** - Oscar Fingal O'Flahertie Wills Wilde.
-  5. **The Strange Case of Dr Jekyll and Mr Hyde** - Robert Louis Stevenson.
-  6. **Twenty Thousand Leagues Under the Sea** - Jules Gabriel Verne.
+  1. **Dracula** by Bram Stoker.  
+  2. **King Solomon's Mines** by Sir Henry Rider Haggard.
+  3. **The Invisible Man** by Herbert George Wells
+  4. **The Picture of Dorian Gray** by Oscar Fingal O'Flahertie Wills Wilde.
+  5. **The Strange Case of Dr Jekyll and Mr Hyde** by Robert Louis Stevenson.
+  6. **Twenty Thousand Leagues Under the Sea** by Jules Gabriel Verne.
+ * The music is **Lacrimosa** from the Requiem in D minor by Wolfgang Amadeus Mozart.
 
 
 
