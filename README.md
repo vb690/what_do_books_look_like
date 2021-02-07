@@ -6,8 +6,6 @@ This project aims to visualize the representation learned by a word-level langua
 
 This project was inspired by [What do numbers look like](https://johnhw.github.io/umap_primes/index.md.html).
 
-## Motivation
-
 ## Features
 
 * Automated data preparation: from PDF to numpy arrays.
