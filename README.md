@@ -66,7 +66,7 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
   <img src="page/images/twenty_thousand_leagues_under_the_sea.png" width="300" />
 </p>  
   
-### Sequential visuaalization of word embedding for a specific book  
+### Sequential visualization of word embedding for a specific book  
   
 <p align="center">
   <img src="page/images/twenty_thousand_leagues_under_the_sea.gif" width="600" />
