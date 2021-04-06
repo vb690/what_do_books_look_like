@@ -47,7 +47,7 @@ Alternatively, each script in `run_pipeline.py` can be launched separately (in c
   
 5. When the script is done (this can take quite some time), use the notebook `generate_visuals.ipynb` for obtaining the visuals.
 
-## The League of Extraordinary Gentlemen
+## Example <br /> The League of Extraordinary Gentlemen
 
 ### Word embedding for the entire collection of books
   
