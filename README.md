@@ -41,13 +41,24 @@ For extracting the representation learned by the model we constructed an encoder
   "The Invisible Man": "summer"
 }
 ```
-4. From the terminal, launch `run_pipeline.py` and specify `your_project_name` when propted to do so.  
+4. From the terminal, launch `run_pipeline.py` and specify `your_project_name` when prompted to do so.  
   
 Alternatively, each script in `run_pipeline.py` can be launched separately (in case a specific step needs to be executed in isolation)
   
 5. When the script is done (this can take quite some time), use the notebook `generate_visuals.ipynb` for obtaining the visuals.
 
 ## Example <br /> The League of Extraordinary Gentlemen
+
+In this example we attempted to visualize the novels linked to some of the members of Alan Moore and  Kevin O'Neill's graphic novel "[The League of Extraordinary Gentlemen](https://en.wikipedia.org/wiki/The_League_of_Extraordinary_Gentlemen)":
+
+1. Mina Harker
+2. Allan Quatermain
+3. Hawley Griffin
+4. Dorian Gray
+5. Edward Hyde
+6. Captain Nemo
+
+In the following visualizations each novel is assigned a specific sequential color palette (see the "How to Use" section). All the sentences constituting the novels are represented as sequences of coloured dots. Each dot represents a word in a sentece while the sequentiality of the colour palette indicates the position of that secific word inside the sentence.
 
 ### Word embedding for the entire collection of books
   
